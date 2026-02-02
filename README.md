@@ -1,2 +1,2 @@
-# Multi-Users-Quantum-Key-Distribution-Networks-with-IBM-Quantum-Computer
-This project showcases multi-users QKD networks on IBM-Quantum Computer.
+# Multi-Users Quantum Key Distribution Networks with IBM-Quantum Computer
+This project showcases multi-users QKD networks on IBM-Quantum Computer (IBM-Boston). We demonstrate and implemente multi-parties QKD based on the famous E91 protocol. Up to our knowledge, this is the first ever time to implement multi-users entanglement based QKD on IBM-quantum computer simulating the real condition, with an infinite number of users, who are able to share entangled photonic qubits over unauthenticated quantum channels. It 
