@@ -7,7 +7,7 @@ The same simulation carried on the real quantum backend gave a smaller secrete k
 
 The overall picture of the proposed scheme is as follows. Assume multiple parties would like to share a secrete key for secure communication. This can for example be a given structure that want to protectect its internal data or communication between emplyers and employees. The priciple consists of sharing secret information between all legitimate parties using the entanglement based QKD.How can this be achieved for a larger number of users (more than 3 users)?  The E91 protocol has been extensively implemented for two users, but here we go beyond to implement it for any given number of users (please refer to the figure below.
 
-
+![QKD](QKDnet.png)
 
 It works as follows:
 
