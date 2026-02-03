@@ -7,7 +7,7 @@ The same simulation carried on the real quantum backend gave a smaller secrete k
 
 The overall picture of the proposed scheme is as follows. Assume multiple parties would like to share a secrete key for secure communication. This can for example be a given structure that want to protectect its internal data or communication between emplyers and employees. The priciple consists of sharing secret information between all legitimate parties using the entanglement based QKD.How can this be achieved for a larger number of users (more than 3 users)?  The E91 protocol has been extensively implemented for two users, but here we go beyond to implement it for any given number of users (please refer to the figure below.
 
-![QKD](QKDnet.png){width=600}
+![QKD](QKDnet.png = 600){width=600}
 
 It works as follows:
 
@@ -64,6 +64,7 @@ You need:
     **Note:** Please note that the above values are not unique. They depend on several parameters and might change from one quantum hardware to another, depending on the noise level. Belw are the characteristics of the IBM-Boston quantum hardware at the time this experiment was carried out (from Jan. 20 to Jan 25 2026).
 
     ![Computer architecture](compArch.jpeg)
+    *Figure 2: IBM-Boston quantum hardware architecture with 156 qubits, Heron r3 type QPU, 1.37 $10^{-3}$ median two-qubit error. The encicled region are the qubits used to carry out the experiment (i.e. qubits 57, 66, 67, 68, 69 and 78).*
 
     | Qubit | T1( $\mu$ s) | T2( $\mu$ s) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
     |----------|----------|----------|----------|----------|----------|
