@@ -65,9 +65,13 @@ You need:
 
     ![Computer architecture](compArch.jpeg)
 
-    | Number qubits | Column 2 | Column 3 |
-    |----------|----------|----------|
-    | Value A  | Value B  | Value C  |
-    | Value D  | Value E  | Value F  |
+    | Qubit | T1(us) | T2(us) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
+    |----------|----------|----------|----------|----------|----------|
+    | 57   | 228.81  | 306.03  |4.88 $10^{-3}$  |Value C  |Value C  |
+    | 66   | 317.73  | 357.43  |Value C  |Value C  |Value C  |
+    | 67   | 315.43  | 302.53  |Value C  |Value C  |Value C  |
+    | 68   | 264.47  | 220.03  |Value C  |Value C  |Value C  |
+    | 69   | 364.97  | 407.28  |Value C  |Value C  |Value C  |
+    | 78   | 209.63  | 167.33  |Value C  |Value C  |Value C  |
 
     
