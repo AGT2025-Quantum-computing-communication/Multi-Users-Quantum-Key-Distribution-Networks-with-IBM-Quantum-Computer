@@ -25,3 +25,38 @@ It works as follows:
 6 - Upon step 5 satisfied, the outcome results kept secret is used to generate the key. For every trial, when all participants only measure along x- or y-direction and the number of the participants who measure along the y-direction is even, they expect to get perfect correlated results (identical outcomes on ideal conditions). For example, in the case of three users, if the legitimate users selected bases are such that the have the following combinations XXX, XYY, YYX and YXY, the measurement outcomes are identical, provided that the three qubits are prepared in the GHZ state.
 
 7 - Test for error: All legitimates users make public half of their respective secret bit strings, and make a bit-to-bit comparaison to approximate the QBER. If this excceed the threshold value of 5% they abort the communication, otherwise the remaining secrete bit string constitute the secrete key. 
+
+The implementation on the IBM-Quantum computer is clearly detailed in the attached jupyter notebook.
+
+**To get started with our jupyter notebook**
+
+You need:
+
+- To install jupyterlab or jupyter notebook,
+- qiskit version 1.2 or above,
+- qiskit-ibm-runtime version 0.38.0 or above (for accessing the IBM-quantum computers),
+- qiskit-aer version 0.17.0 or above.
+
+  **Example Results**
+
+  To showcase our protocol, we applied to a number of 6 users and 2000 repetitions. We got the following interesting results:
+
+  1- On ideal backend: qiskit-aer simulator (only shot noise is considered):
+  * Without an eavesdropper,
+    - Correlation: 36.72 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Quantum bit error rate: 0%;
+    - Secrete key length 603.
+    * With an eavesdropper,
+    - Correlation: 1.42 (which is far less than the theoretical value, showing violation of the Svelitchny inequality);
+    - Quantum bit error rate: about 1%;
+    - Secrete key length 555.
+
+    2- On real backend: IBM-quantum computer (IBM-Boston):
+  * Without an eavesdropper,
+    - Correlation: 36.72 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Quantum bit error rate: 7.75%
+    - Secrete key length 499.
+    * With an eavesdropper,
+    - Correlation: 1.42 (which is far less than the theoretical value, showing violation of the Svelitchny inequality);
+    - Quantum bit error rate: ;
+    - Secrete key length .
