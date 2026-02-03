@@ -65,7 +65,7 @@ You need:
 
     ![Computer architecture](compArch.jpeg)
 
-    | Qubit | T1($\mu$s) | T2($\mu$s) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
+    | Qubit | T1( $\mu$ s) | T2( $\mu$ s) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
     |----------|----------|----------|----------|----------|----------|
     | 57   | 228.81  | 306.03  |4.88 $10^{-3}$  |6.35 $10^{-4}$  |3.42 $10^{-4}$  |
     | 66   | 317.73  | 357.43  |5.37 $10^{-3}$  |5.37 $10^{-4}$  |5.37 $10^{-4}$  |
