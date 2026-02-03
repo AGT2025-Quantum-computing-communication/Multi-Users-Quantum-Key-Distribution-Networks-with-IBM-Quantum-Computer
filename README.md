@@ -66,8 +66,8 @@ You need:
     ![Computer architecture](compArch.jpeg)
 
     | Number qubits | Column 2 | Column 3 |
-|----------|----------|----------|
-| Value A  | Value B  | Value C  |
-| Value D  | Value E  | Value F  |
+    |----------|----------|----------|
+    | Value A  | Value B  | Value C  |
+    | Value D  | Value E  | Value F  |
 
     
