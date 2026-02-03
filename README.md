@@ -64,4 +64,10 @@ You need:
     **Note:** Please note that the above values are not unique. They depend on several parameters and might change from one quantum hardware to another, depending on the noise level. Belw are the characteristics of the IBM-Boston quantum hardware at the time this experiment was carried out (from Jan. 20 to Jan 25 2026).
 
     ![Computer architecture](compArch.jpeg)
+
+    | Number qubits | Column 2 | Column 3 |
+|----------|----------|----------|
+| Value A  | Value B  | Value C  |
+| Value D  | Value E  | Value F  |
+
     
