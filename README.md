@@ -13,11 +13,11 @@ It works as follows:
 
 1 - A neutral party, holding a multi-entangled particles source (a spontaneous parametric down-conversion photon source for example) uses it to generate and distribute entangled photonic qubits to legitimate parties through out unthenticated quantum channels.
 
-2 - Each legitimate party upon receiving the qubit, select at random a measurement basis (between {$X$, $Y$, $(X+Y)/\sqrt{2}$, $(X-Y)/\sqrt{2}$} for one of the users and between {$X$, $Y$} for the others) to measure their respective qubits. Here, $X$ and $Y$ stand for the Pauli $X$- and $Y$ bases respectively. 
+2 - Each legitimate party upon receiving the qubit, select at random a measurement basis (between { $X$, $Y$, $(X+Y)/\sqrt{2}$, $(X-Y)/\sqrt{2}$ } for one of the users and between { $X$, $Y$ } for the others) to measure their respective qubits. Here, $X$ and $Y$ stand for the Pauli $X$- and $Y$ bases respectively. 
 
 3 - Repeat steps 1 and 2 N-times, keep the measurement outcome secrete and make their respective measurement bases public. 
 
-4 - All legitimate users also make public the outcome of their results obtained when the measurement basis of the user who select between {$X$, $Y$, $R = (X+Y)/\sqrt{2}$, $V = (X-Y)/\sqrt{2}$} is either $R$ or $V$ for eavesdropper testing and keep the remaining secrete. Using this public result, they compute the Svelitchny upper bound.
+4 - All legitimate users also make public the outcome of their results obtained when the measurement basis of the user who select between { $X$, $Y$, $R = (X+Y)/\sqrt{2}$, $V = (X-Y)/\sqrt{2}$ } is either $R$ or $V$ for eavesdropper testing and keep the remaining secrete. Using this public result, they compute the Svelitchny upper bound.
 
 5 - Based on that upper bound, they check if it violates the inequality, depending on the number of users involved. This serves as a reliable test for eavesdropper in the sense that it must be approximately $2^{N-1}\sqrt{2}$ if no eavesdropper (note that we assume no noise), otherwise, they must abort the communication. It is important to notice that the Svelitchny inequality is an ubiqutous test for entanglement, which collapses if someone interfers with the qubits. For a three parties communication, the Svelitchny inequality is given by $\langle RXX\rangle$ + $\langle RXY\rangle$ + $\langle RYX\rangle$ + $\langle VXX\rangle$ - $\langle RYY\rangle$ - $\langle VXY\rangle$ - $\langle VYX\rangle$ - $\langle VYY\rangle \leq 4\sqrt{2}$. (Please refer to for more detailed mathematics on N-particle Svelitchny inequality). We also notice that for a maximally entangled state (GHZ for example) it is exactly $4\sqrt{2}$, and for N-particle GHZ state, it is exactly $2^{N-1}\sqrt{2}$.
 
@@ -53,7 +53,7 @@ You need:
 
     2- On real backend: IBM-quantum computer (IBM-Boston):
   * Without an eavesdropper,
-    - Correlation: 36.72 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Correlation: 36.72 $\esqiv$ $2^5\sqrt{2}$(which is the theoretical value);
     - Quantum bit error rate: 7.75%
     - Secrete key length 499.
     * With an eavesdropper,
