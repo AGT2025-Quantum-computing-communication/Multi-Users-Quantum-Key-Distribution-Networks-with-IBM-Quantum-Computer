@@ -67,7 +67,7 @@ You need:
 
 *Figure 2: IBM-Boston quantum hardware architecture with 156 qubits, Heron r3 type QPU, 1.37 $10^{-3}$ median two-qubit error. The encicled region are the qubits used to carry out the experiment (i.e. qubits 57, 66, 67, 68, 69 and 78) ( [see](https://quantum.cloud.ibm.com/computers) ).*
 
-    | Qubit | T1( $\mu$ s) | T2( $\mu$ s) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
+   | Qubit | T1( $\mu$ s) | T2( $\mu$ s) | Readout error | Prob meas0 prep1 |Prob meas1 prep0 |
     |----------|----------|----------|----------|----------|----------|
     | 57   | 228.81  | 306.03  |4.88 $10^{-3}$  |6.35 $10^{-4}$  |3.42 $10^{-4}$  |
     | 66   | 317.73  | 357.43  |5.37 $10^{-3}$  |5.37 $10^{-4}$  |5.37 $10^{-4}$  |
