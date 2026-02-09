@@ -1,5 +1,5 @@
 # Multi-Users Quantum Key Distribution Networks with IBM-Quantum Computer
-This project showcases multi-users QKD networks on IBM-Quantum Computer (IBM-Boston). We demonstrate and implemente multi-parties QKD based on the famous E91 protocol. Up to our knowledge, this is the first ever time to implement multi-users entanglement based QKD on IBM-quantum computer simulating the real condition, with an infinite number of users, who are able to share entangled photonic qubits over unauthenticated quantum channels. It additionally implemente eavesdropper testing by demonstrating the violation of $N$-particles Svelitchny inequality. The example here considered showcases the working principle for 6 users, on ideal conditions (no eavesdropper) on one hand and assuming the worst scenario where the source is totally under eavesdropper's control who can perform the intercept-and-resend attack on the other hand. We then first  simulated the algorithm on ideal backend (Qiskit Aer Simulator) where only shot noise is considered, and on real backend (IBM-Boston), where qubits are totally noisy. The results  show sucessful distribution of secure key to all parties with a lenght of about 506 bits, a 0% quantum bit error rate (QBER) and the Svetlichny upper bound of 44.589, close to the theoretical value of $2^5\sqrt{2}$. This is obtained in ideal conditions (i.e. no eavesdropper and no extra noise appart from shot noise). However, the eavesdropper testing implementation clearly demonstrate the violation of Svetlichny inequality (the upper bound obtained is 0.335), exposing the eavesdropper to detection by legitimate users, although the QBER did not change. 
+This project showcases multi-users QKD networks on IBM-Quantum Computer (IBM-Boston). We demonstrate and implemente multi-parties QKD based on the famous E91 protocol. Up to our knowledge, this is the first ever time to implement multi-users entanglement based QKD on IBM-quantum computer simulating the real condition, with an infinite number of users, who are able to share entangled photonic qubits over unauthenticated quantum channels. It additionally implemente eavesdropper testing by demonstrating the violation of $N$-particles Svelitchny inequality. The example here considered showcases the working principle for 6 users, on ideal conditions (no eavesdropper) on one hand and assuming the worst scenario where the source is totally under eavesdropper's control who can perform the intercept-and-resend attack on the other hand. We then first  simulated the algorithm on ideal backend (Qiskit Aer Simulator) where only shot noise is considered, and on real backend (IBM-Boston), where qubits are totally noisy. The results  show sucessful distribution of secure key to all parties with a lenght of about 464 bits, a 0% quantum bit error rate (QBER) and the Svetlichny upper bound of 44.901, close to the theoretical value of $2^5\sqrt{2}$. This is obtained in ideal conditions (i.e. no eavesdropper and no extra noise appart from shot noise). However, the eavesdropper testing implementation clearly demonstrate the violation of Svetlichny inequality (the upper bound obtained is -4.732), exposing the eavesdropper to detection by legitimate users, although the QBER did not change. (Please note that these values are averaged over 100 runs and might slightly fluctuate, however the  Svetlichny inequality upper bound will converge to the theoretical value for infinite number of circuits).
 
 The same simulation carried on the real quantum backend gave a secrete key length of 546 bits, a QBER of 3.48% and the Svetlichny upper bound of 1.649 when no eavesdropper interferred with the qubits but the latest are too noisy. However, when an eavesdropper interfers with those noisy qubits, we obtain a  secrete key with almost the same length on average (546 bits), a QBER of 5.86% and the Svetlichny inequality upper bound of 1.298. These results demonstrate that under a noisy environment, our multi-users QKD protocol might not be hundred per cent efficient since the QBER over pass the threshold value of 1% even when there is no eavesdropper in the middle. But with a performant error correction algorithm like the low density parity check (LDPC) for example, this can be improved. In addition, the learning information rate from eavesdropper is approximately 50% for both scenario, demonstrating that even though it might be hard, the eavesdropper can determine the secrete key with high accuracy, by performing additional post-processing techniques, if no action is taken from legitimate users (a privacy amplification for example). This algorithm demonstrate a practical example of QKD for example in internet communication or networks communication involving higher number of users.
 
@@ -43,23 +43,23 @@ You need:
 
   1- On ideal backend: qiskit-aer simulator (only shot noise is considered):
   * Without an eavesdropper,
-    - Correlation: 36.72 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Correlation: 44.901 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
     - Quantum bit error rate: 0%;
-    - Secrete key length 603.
+    - Secrete key length 464 bits.
     * With an eavesdropper,
-    - Correlation: 1.42 (which is far less than the theoretical value, showing violation of the Svelitchny inequality);
-    - Quantum bit error rate: about 1%;
-    - Secrete key length 555.
+    - Correlation: -4.732 (which is far less than the theoretical value, showing violation of the Svetlichny inequality);
+    - Quantum bit error rate: about 0%;
+    - Secrete key length 464 bits.
 
     2- On real backend: IBM-quantum computer (IBM-Boston):
   * Without an eavesdropper,
-    - Correlation: 36.72 $\esqiv$ $2^5\sqrt{2}$(which is the theoretical value);
-    - Quantum bit error rate: 7.75%
-    - Secrete key length 499.
+    - Correlation: 1.649 $<$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Quantum bit error rate: 3.48%
+    - Secrete key length 546 bits.
     * With an eavesdropper,
-    - Correlation: 1.42 (which is far less than the theoretical value, showing violation of the Svelitchny inequality);
-    - Quantum bit error rate: ;
-    - Secrete key length .
+    - Correlation: 1.298 (which is far less than the theoretical value, showing violation of the Svelitchny inequality);
+    - Quantum bit error rate: 5.86%;
+    - Secrete key length 546 bits.
    
     **Note:** Please note that the above values are not unique. They depend on several parameters and might change from one quantum hardware to another, depending on the noise level. Belw are the characteristics of the IBM-Boston quantum hardware at the time this experiment was carried out (from Jan. 20 to Jan 25 2026).
 
