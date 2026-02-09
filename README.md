@@ -43,7 +43,7 @@ You need:
 
   1- On ideal backend: qiskit-aer simulator (only shot noise is considered):
   * Without an eavesdropper,
-    - Correlation: 44.901 $\esquiv$ $2^5\sqrt{2}$(which is the theoretical value);
+    - Correlation: 44.901 $\approx$ $2^5\sqrt{2}$(which is the theoretical value);
     - Quantum bit error rate: 0%;
     - Secrete key length 464 bits.
     * With an eavesdropper,
