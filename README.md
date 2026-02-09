@@ -63,7 +63,7 @@ You need:
    
     **Note:** Please note that the above values are not unique. They depend on several parameters and might change from one quantum hardware to another, depending on the noise level. Belw are the characteristics of the IBM-Boston quantum hardware at the time this experiment was carried out (from Jan. 20 to Jan 25 2026).
 
-    ![Computer architecture](compArch.jpeg)
+<img src="compArch.jpeg" width="800" height="800">
     
     *Figure 2: IBM-Boston quantum hardware architecture with 156 qubits, Heron r3 type QPU, 1.37 $10^{-3}$ median two-qubit error. The encicled region are the qubits used to carry out the experiment (i.e. qubits 57, 66, 67, 68, 69 and 78) ( [see](https://quantum.cloud.ibm.com/computers) ).*
 
